@@ -1,12 +1,11 @@
 ---
 site:
-  title: Showroom Template Demo
-  url: https://redhat-scholars.github.io/course-template
+  title: Hands-on lab with Red Hat OpenShift Platform Plus
   start_page: modules::index.adoc
 
 content:
   sources:
-    - url: .
+    - url: ./
       start_path: content
 
 ui:
@@ -27,8 +26,9 @@ runtime:
 
 antora:
   extensions:
-    - require: ./content/lib/dev-mode.js
-      enabled: true
+    - id: dev-mode
+      require: ./content/lib/dev-mode.js
+      enabled: false
 
 output:
   dir: ./www
